@@ -1,5 +1,5 @@
 {
-  "name": "untitled-element",
+  "name": "video-js",
   "private": true,
   "dependencies": {
     "polymer": "Polymer/polymer#master",
