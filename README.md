@@ -1,4 +1,4 @@
 video-js
 ================
 
-See the [component page](http://polymerlabs.github.io/untitled-element) for more information.
+See the [component page](http://addyosmani.github.io/video-js) for more information.
