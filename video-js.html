@@ -1,58 +1,71 @@
 <link rel="import" href="../polymer/polymer.html">
+<script src="../videojs/dist/video-js/video.js"></script>
+<link rel="stylesheet" type="text/css" href="../videojs/dist/video-js/video-js.css">
 
 <!--
-Element providing solution to no problem in particular.
+Element providing a wrapper around the Video.js HTML5 video library
 
 ##### Example
 
-    <video-js></video-js>
+  <video-js controls preload="auto" width="640" height="264"
+    poster="oceans-clip.png">
+   <source src="oceans-clip.mp4" type='video/mp4' />
+   <source src="oceans-clip.webm" type='video/webm' />
+   <source src="oceans-clip.ogv" type='video/ogg' />
+  </video-js>
 
 @element video-js
-@blurb Element providing solution to no problem in particular.
+@blurb Element providing a wrapper around the Video.js HTML5 video library
 @status alpha
-@url github.io
+@url addyosmani.github.io/video-js
 -->
-<polymer-element name="video-js" attributes="notitle">
+<polymer-element name="video-js" attributes="width height preload poster">
 
-  <template>
-
-    <link href="video-js.css" rel="stylesheet" />
-
-    <content></content>
-
-  </template>
+    <template>
+        <video class="video-js vjs-default-skin" id="myvideo" controls width="{{width}}" height="{{height}}" preload="{{preload}}" poster="{{poster}}">
+            <content></content>
+        </video>
+    </template>
 
   <script>
 
     Polymer({
-      /**
-       * The `noevent` event is not actually fired from here,
-       * we document it as an example of documenting events.
-       * 
-       * @event noevent
-       */
 
       /**
-       * The `notitle` attribute does not yet have a purpose.
+       * The `width` attribute specifies the width of a video player, in pixels
        * 
-       * @attribute notitle
+       * @attribute width
+       * @type integer
+       */
+      width: 640,
+
+      /**
+       * The `height` attribute specifies the height of a video player, in pixels
+       * 
+       * @attribute height
+       * @type integer
+       */
+      height: 264,
+
+      /**
+       * The `preload` attribute specifies if and how the author thinks that the video should be loaded when the page loads
+       * 
+       * @attribute preload
        * @type string
        */
-      notitle: '',
-
-      ready: function() {
-      },
+      preload: 'auto',
 
       /**
-       * The `task` method does no work at this time.
+       * The `poster` attribute specifies an image shown while the video is downloading
        * 
-       * @method task
-       * @return {Object} Returns undefined.
-       * @param {String} dummy Serves no purpose today.
+       * @attribute poster
+       * @type string
        */
-      task: function(dummy) {
-      }
+      poster: '',
 
+      ready: function() {
+        videojs(this.$.myvideo);
+      }
     });
 
   </script>
