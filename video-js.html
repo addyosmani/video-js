@@ -7,17 +7,16 @@ Element providing a wrapper around the Video.js HTML5 video library
 
 ##### Example
 
-  <video-js controls preload="auto" width="640" height="264"
-    poster="oceans-clip.png">
-   <source src="oceans-clip.mp4" type='video/mp4' />
-   <source src="oceans-clip.webm" type='video/webm' />
-   <source src="oceans-clip.ogv" type='video/ogg' />
-  </video-js>
-
+    <video-js controls preload="auto" width="640" height="264" poster="oceans-clip.png">
+     <source src="oceans-clip.mp4" type='video/mp4' />
+     <source src="oceans-clip.webm" type='video/webm' />
+     <source src="oceans-clip.ogv" type='video/ogg' />
+    </video-js>
+ 
 @element video-js
 @blurb Element providing a wrapper around the Video.js HTML5 video library
 @status alpha
-@url addyosmani.github.io/video-js
+@url http://addyosmani.github.io/video-js
 -->
 <polymer-element name="video-js" attributes="width height preload poster">
 
@@ -48,7 +47,7 @@ Element providing a wrapper around the Video.js HTML5 video library
       height: 264,
 
       /**
-       * The `preload` attribute specifies if and how the author thinks that the video should be loaded when the page loads
+       * The `preload` attribute specifies if/how the video should be loaded
        * 
        * @attribute preload
        * @type string
@@ -56,7 +55,7 @@ Element providing a wrapper around the Video.js HTML5 video library
       preload: 'auto',
 
       /**
-       * The `poster` attribute specifies an image shown while the video is downloading
+       * The `poster` attribute specifies an image shown while downloading
        * 
        * @attribute poster
        * @type string
