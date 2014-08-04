@@ -1,0 +1,15 @@
+{
+  "name": "video-js",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.4",
+    "videojs": "~4.5.2"
+  },
+  "resolutions": {
+    "polymer": "~0.3.4",
+    "platform": ">=0.3.0 <1.0.0",
+    "core-component-page": ">=0.3.0 <1.0.0",
+    "core-selection": ">=0.3.0 <1.0.0",
+    "core-selector": ">=0.3.0 <1.0.0"
+  }
+}
