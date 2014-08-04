@@ -1,6 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
 <script src="../videojs/dist/video-js/video.js"></script>
-<link rel="stylesheet" type="text/css" href="../videojs/dist/video-js/video-js.css">
 
 <!--
 Element providing a wrapper around the Video.js HTML5 video library
@@ -21,6 +20,7 @@ Element providing a wrapper around the Video.js HTML5 video library
 <polymer-element name="video-js" attributes="width height preload poster">
 
     <template>
+        <link rel="stylesheet" href="../videojs/dist/video-js/video-js.css">
         <video class="video-js vjs-default-skin" id="myvideo" controls width="{{width}}" height="{{height}}" preload="{{preload}}" poster="{{poster}}">
             <content></content>
         </video>
